@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla Compleja</title>
+    <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item5 { grid-area: footer; }
+        
+        .grid-general {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'menu main main main main main'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+
+        .item2 {
+            background-color: #f9f9f9;
+            padding: 5px;
+            font-size: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+            gap: 20px;
+            text-align: center;
+        }
+
+        .grid-item {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .grid-item img {
+            width: 170px; /* imágenes más grandes */
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-general">
+        <div class="item1">
+            <h2>Productos</h2>
+        </div>
+        
+        
+    <div class="item2">
+    <h3>Filtrar Productos</h3>
+    <form>
+        <label for="categoria">Categoría:</label><br>
+        <select id="categoria" name="categoria">
+            <option value="todos">Todos</option>
+            <option value="cascos">Cascos</option>
+            <option value="guantes">Guantes</option>
+            <option value="calzado">Calzado</option>
+        </select><br>
+        <label for="precio">Precio máx:</label><br>
+        <input type="number" id="precio" name="precio" placeholder="Ingrese precio"><br>
+        <button type="submit">Aplicar</button>
+    </form>
+    </div>
+
+    <main>
+        <div class="item3">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/foco-con-dedos.webp"><br>
+                    MANOPLA
+                </div>
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/protectores-manos.webp"><br>
+                    GUANTES
+                </div>
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/cabezal-cerrado.webp"><br>
+                    CASCO
+                </div>
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/escudo-potencia.webp"><br>
+                    ESCUDO
+                </div>
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/protectores-pie.webp"><br>
+                    CALZADO
+                </div>
+                <div class="grid-item">
+                    <img src="../Ejercicios-JavaScript/images/dobok.webp"><br>
+                    DOBOK
+                </div>
+            </div>
+        </div>
+    </main>
+        <div class="item5">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>
